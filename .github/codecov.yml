@@ -27,10 +27,10 @@ flags:
   #   paths:
   #      - ui/cypress/integration/integration
   #   carryforward: true
-  # front-end-e2e-tests:
-  #   paths:
-  #      - ui/cypress/integration/e2e
-  #   carryforward: true
+  front-end-e2e-tests:
+    paths:
+       - ui/tests/e2e
+    carryforward: true
   backend:
     paths:
     # Accepts only glob patterns, not regex

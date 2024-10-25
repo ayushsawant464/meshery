@@ -42,3 +42,13 @@ jobs:
       output_filename: data.json
     secrets:
       token: ${{ secrets.PROVIDER_TOKEN }}  
+  
+  steps:
+   - name: Run Playwright Tests with Coverage
+        run: npx playwright test --coverage  # Adjust as needed
+
+   - name: Upload coverage to Codecov
+     uses: codecov/codecov-action@v2
+     with:
+        file: coverage/lcov.info  # Path to your coverage report
+        flags: front-end-e2e-tests 
